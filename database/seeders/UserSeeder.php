@@ -1,6 +1,8 @@
 <?php
 
 
+namespace Database\Seeders;
+
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
@@ -12,13 +14,13 @@ class UserSeeder extends Seeder
     {
         DB::table('users')->insert([
             [
-                'username' => 'admin',
+                'name' => 'admin',
                 'password' => Hash::make('admin123'), // always hash passwords
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ],
             [
-                'username' => 'author',
+                'name' => 'author',
                 'password' => Hash::make('author123'),
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
