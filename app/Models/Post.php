@@ -33,14 +33,4 @@ class Post extends Model
         });
     }
 
-    // Many-to-many relationship with Category
-    public function categories(): BelongsToMany
-    {
-        return $this->belongsToMany(Category::class);
-    }
-
-     public function author()
-    {
-        return $this->belongsTo(User::class, 'author_id');
-    }
 }
