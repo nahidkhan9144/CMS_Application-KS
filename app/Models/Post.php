@@ -16,8 +16,14 @@ class Post extends Model
         'summary',
         'status',
         'published_date',
-        'author_id',
+        'author_name',
+        'user_id',
     ];
+
+      public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 
      protected static function boot()
     {

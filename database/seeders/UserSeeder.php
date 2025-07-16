@@ -15,18 +15,22 @@ class UserSeeder extends Seeder
         DB::table('users')->insert([
             [
                 'name' => 'admin',
-                'password' => Hash::make('admin123'), // always hash passwords
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now()
+                'password' => Hash::make('admin123'),
+                'created_at' => now(),
+                'updated_at' => now(),
             ],
             [
                 'name' => 'author',
                 'password' => Hash::make('author123'),
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now()
-            ]
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => 'nahid',
+                'password' => Hash::make('nahid123'),
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
         ]);
     }
 }
-
-?>
